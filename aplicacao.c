@@ -62,17 +62,16 @@ void setProximaConsulta(paciente pacientes[20],int idPaciente){
 }
 
 int registados(char *nomeFicheiro){
-int linhas,ch;
-FILE *fp=fopen(nomeFicheiro,"r");
+	int linhas,ch;
+	FILE *fp=fopen(nomeFicheiro,"r");
 
-while(!feof(fp))
-{
-  ch = fgetc(fp);
-  if(ch == '\n')
-  {
+		while(!feof(fp))
+		{
+  		ch = fgetc(fp);
+  		if(ch == '\n'){
     linhas++;
-  }
-}
+  	}
+	}
 	return linhas;
 }
 
@@ -177,7 +176,7 @@ int main(void) {
 
 	scanf("%d",&menu);
 	if(menu!=1 && menu!=2 && menu!=0){
-		printf("Op��o inv�lida");
+		printf("Opção inválida");
 	}
 }while(menu!=1 && menu!=2 && menu!=0);
 	switch(menu){
